@@ -1,0 +1,115 @@
+.header__progress {
+    text-align: center;
+}
+
+/* section.progres{
+    display: flex;
+    justify-content: center;
+    width:100%;
+    align-items: center;
+} */
+
+section#progress h2::after {
+    content: "";
+    border-bottom: 5px solid #252525;
+    width: 80px;
+    display: block;
+    margin: 10px auto;
+    margin-bottom: 20px;
+}
+
+section.progres .gallery__container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+
+section.progres .gallery {
+    /* margin: 20px; */
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.progres .gallery img {
+    max-width: 500px;
+    height: 360px;
+    border-radius: 10px;
+    box-shadow: 7px 10px 5px 0px rgba(37,37,37,0.75);
+    -webkit-box-shadow: 7px 10px 5px 0px rgba(37,37,37,0.75);
+    -moz-box-shadow: 7px 10px 5px 0px rgba(37,37,37,0.75);
+}
+
+section.progres .gallery .intro {
+    height: 50px;
+    width: 500px;
+    padding: 7px;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: rgba(27, 27, 27, .5);
+    color: #fff;
+    border-radius: 0 0 10px 10px;
+    bottom: 0;
+    transition: .5s ease-in;
+}
+
+section.progres .gallery__container .gallery .intro p {
+    margin: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+
+section.progres .gallery__container .gallery .intro span {
+    color: blanchedalmond;
+    font-weight: bold;
+}
+
+section.progres .gallery:hover {
+    cursor: pointer;
+}
+
+section.progres .gallery:hover img {
+    transform: scale(1.1) rotate();
+}
+
+section.progres .gallery:hover .intro {
+    height: 200px;
+    bottom: 0;
+}
+
+section.progres .gallery:hover .intro p {
+    opacity: 1;
+    visibility: visible;
+}
+
+/******************** MEDIUM DEVICE  **********************************/
+@media screen and (max-width:1024px) {
+    .gallery__container {
+        width: 80%;
+    }
+}
+
+/******************** SMALL DEVICE  **********************************/
+@media screen and (max-width:600px) {
+    .gallery__container {
+        width: 95%;
+    }
+    
+    section.progres .gallery img {
+        max-width: 400px;
+        height: 300px;
+    }
+    
+    section.progres .gallery .intro {
+        max-width: 400px;
+        bottom: 30px;
+    }
+    
+    section.progres .gallery:hover .intro{
+        bottom: 30px;
+    }
+}

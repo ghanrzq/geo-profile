@@ -1,0 +1,57 @@
+section.about{
+    justify-content: center;
+    width:100%;
+    background: #252525;
+    color: #fff;
+}
+
+section h2 {
+    font-size: 30px;
+}
+
+section h2::after {
+    content: "";
+    border-bottom: 5px solid #eceef5;
+    width: 80px;
+    display: block;
+    margin: 10px auto;
+    margin-bottom: 20px;
+}
+
+section h5 {
+    font-size: 15px;
+    opacity: .8;
+    padding-top: 30px;
+    margin-bottom: -8px;
+}
+
+.header__about {
+    text-align: center;
+}
+
+section#about .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+/* .box {
+    margin-right: 5px;
+    transform: translateX(400%);
+    transition: transform 1s ease-in-out;
+}
+
+.box:nth-of-type(even) {
+    transform: translateX(-400%);
+}
+
+.box.show {
+    transform: translateX(0);
+} */
+
+/*************************************** MEDIA QUARY SMALL********************************/
+@media screen and (max-width:600px) {
+    section#about .services {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
